@@ -1,0 +1,22 @@
+В данном репозитории находятся скрипты движка видеоархива, а также сервер
+видеонаблюдения.
+
+Для запуска данного движка необходимо:
+
+1. Systemd
+
+2. VLC
+
+3. FFmpeg
+
+Копируем все файлы в ~/.local из данного репозитория и выполняем следующие
+команды:
+
+$ systemctl --user enable camerad --now
+
+$ systemctl --user enable streamrecorderd --now
+ 
+$ systemctl --user enable videoremoverd --now
+
+$ systemctl --user enable archiveserverd --now
+

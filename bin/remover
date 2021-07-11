@@ -1,0 +1,20 @@
+#!/bin/bash
+
+pushd .
+
+cd ~/archive
+
+while `true`
+do
+	time=`date -u +%s`
+	for x in `cat archivelist`
+	do
+		if (( $(echo "scale=0; ($time - $x)" | bc -lq) > 86400 ))
+		then
+			rm $x
+			cat archivelist | tail +2 > archivelist
+		fi
+	done
+done
+
+popd

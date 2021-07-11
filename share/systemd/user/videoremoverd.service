@@ -1,0 +1,9 @@
+[Unit]
+Description=Web-camera recording daemon
+
+[Service]
+ExecStart=/home/danila/.local/bin/remover
+
+[Install]
+WantedBy=default.target
+

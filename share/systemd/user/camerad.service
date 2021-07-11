@@ -1,0 +1,9 @@
+[Unit]
+Description=Web-camera streaming daemon
+
+[Service]
+ExecStart=/home/danila/.local/bin/camera_stream_server /dev/video0
+
+[Install]
+WantedBy=default.target
+

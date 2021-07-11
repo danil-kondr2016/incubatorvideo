@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cvlc v4l2://$1 --sout '#transcode{vcodec=mp2v,vb=400,fps=15,scale=Auto,width=320,height=240,acodec=none,scodec=none}:http{mux=ts,dst=:8081/}' --no-sout-all --sout-keep

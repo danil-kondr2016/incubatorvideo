@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mkdir -p /home/danila/archive
+pushd .
+cd /home/danila/archive/
+
+while `true`
+do
+	date=`date -u +%s`
+	ffmpeg -t 60 -i "http://127.0.0.1:8081/" \
+		-c:v mpeg4 -b:v 400k \
+		-f mp4 $date
+	echo $date >> archivelist
+done
+
+# vi: tw=0

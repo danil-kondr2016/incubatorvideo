@@ -1,0 +1,9 @@
+[Unit]
+Description=Video archive server
+
+[Service]
+ExecStart=/home/danila/.local/bin/video_archive_server
+
+[Install]
+WantedBy=default.target
+

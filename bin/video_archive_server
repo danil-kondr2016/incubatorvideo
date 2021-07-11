@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pushd .
+cd /home/danila/archive
+python3 -m http.server 8080
+
